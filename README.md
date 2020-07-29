@@ -15,6 +15,8 @@ This repo provides the .devcontainer files needed to start a CodeSpace for Larav
 
 ## Notes
 - CodeSpaces is currently in Closed Beta, you need access to use .devcontainer files
+- Includes the following PHP extensions, you can add your own by adjusting the DOCKERFILE
+    - bcmath mysqli pdo pdo_mysql zip
 - To access your site you need to run the following:
     ```php
     php artisan serve
