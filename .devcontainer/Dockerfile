@@ -37,7 +37,6 @@ RUN apt-get update \
 
 # Install Composer from: https://hub.docker.com/_/composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-RUN composer global require beyondcode/expose
 RUN  echo 'export PATH="$PATH:$HOME/.composer/vendor/bin:/root/.composer/vendor/bin:vendor/bin"' >> /root/.bashrc
 RUN  curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN  apt-get install -y nodejs
@@ -55,4 +54,3 @@ RUN  echo "alias art='php artisan'" >> /root/.bashrc && \
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=
-
