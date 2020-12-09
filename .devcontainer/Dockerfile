@@ -38,8 +38,7 @@ RUN apt-get update \
 # Install Composer from: https://hub.docker.com/_/composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN composer global require beyondcode/expose
-RUN  echo 'export PATH="$PATH:$HOME/.composer/vendor/bin:vendor/bin"' >> /home/$USERNAME/.bashrc \
-     && su - $USERNAME -c "composer global require hirak/prestissimo"
+RUN  echo 'export PATH="$PATH:$HOME/.composer/vendor/bin:vendor/bin"' >> /home/$USERNAME/.bashrc
 RUN  curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN  apt-get install -y nodejs
 RUN apt-get install -y libzip-dev \
