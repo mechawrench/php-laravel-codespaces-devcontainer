@@ -12,6 +12,21 @@ This repo provides the .devcontainer files needed to start a CodeSpace for Larav
     ```bash
     . ./init_codespace.sh
     ```
+## MariaDB access (ENV settings)
+Please set your DB env variables to the following to use the MariaDB docker container
+```env
+DB_CONNECTION=mysql
+DB_HOST=mariadb
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=secret
+```
+
+## Expose by BeyondCode
+Expose is included with this build.  Expose allows you to share your site with others, see documentation at https://beyondco.de/docs/expose/introduction
+
+To use Expose, simply run the command "expose"
 
 ## Notes
 - CodeSpaces is currently in Closed Beta, you need access to use .devcontainer files
