@@ -12,7 +12,13 @@ This repo provides the .devcontainer files needed to start a CodeSpace for Larav
     ```bash
     . ./init_codespace.sh
     ```
-## MariaDB access (ENV settings)
+1. To access your site use port forwarding by serving the application
+    ```bash
+    serve
+    #or
+    php artisan serve --port=8000 --host=0.0.0.0
+    ```
+## MariaDB (ENV settings)
 Please set your DB env variables to the following to use the MariaDB docker container
 ```env
 DB_CONNECTION=mysql
@@ -32,9 +38,9 @@ To use Expose, simply run the command "expose"
 - CodeSpaces is currently in Closed Beta, you need access to use .devcontainer files
 - Includes the following PHP extensions, you can add your own by adjusting the DOCKERFILE
     - bcmath mysqli pdo pdo_mysql zip
-- To access your site you need to run the following:
+- To access your site you need to run the following alias:
     ```php
-    php artisan serve
+    serve
     ```
 
 # Credits
